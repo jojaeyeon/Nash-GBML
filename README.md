@@ -3,7 +3,7 @@
 ### Default
 $\mathcal{L}_{i}$
 ### Penalty type 1
-$\mathcal{L}_{i}+p_{1}$ where
+$p_{1}(w)={{w}\over{dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2}$ 
 
 ### Penalty type 2
 $p_{2}(x)$
