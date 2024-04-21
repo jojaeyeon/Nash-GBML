@@ -3,7 +3,7 @@
 ### Default
 $\mathcal{L}_{i}$
 ### Penalty type 1
-$$p_{1}(w)={{w}\over{\dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2} \leftVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rightVert_{2}^{2}$$
+$$p_{1}(w)={{w}\over{\dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2} \LeftVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \RightVert_{2}^{2}$$
 
 ### Penalty type 2
 $p_{2}(x)$
