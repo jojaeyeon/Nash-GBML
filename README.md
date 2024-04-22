@@ -9,9 +9,9 @@ $$p_{2}(w, r) = w {{B \lVert \theta - \phi_{i} \rVert_{2}^{r}}\over{C + \sum\lim
 
 where $N$ is the number of task, $B$ is the batch-size, and $C$ is a very small constant to prevent division by zero.
 
-### Penalty 1 (w): $p_{1}(w)$
-### Penalty 2 (w): $p_{2}(w, 2)$
-### Penalty 3 (w): $p_{2}(w, 4)$
+### Penalty 1 with weight $w$: $p_{1}(w)$
+### Penalty 2 with weight $w$: $p_{2}(w, 2)$
+### Penalty 3 with weight $w$: $p_{2}(w, 4)$
 
 ## Sinusoid Regression
 ### 5-shot sinusoid MAML train:
