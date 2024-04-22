@@ -13,7 +13,8 @@ where $N$ is the number of task, $B$ is the batch-size, and $C$ is a very small 
 ### Penalty 2 with weight $w$: $p_{2}(w, 2)$
 ### Penalty 3 with weight $w$: $p_{2}(w, 4)$
 
-## Sinusoid Regression
+
+## Sinusoid Regression - MAML
 ### 5-shot sinusoid MAML train:
 python main.py --datasource=1 --model_type=1 --penalty_type=0 --train --seed=5
 ### 5-shot sinusoid MAML test:
@@ -35,6 +36,7 @@ python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=5 -
 python main.py --datasource=1 --model_type=1 --penalty_type=3
 
 
+## Sinusoid Regression - TR-MAML
 ### 5-shot sinusoid TR-MAML train:
 python main.py --datasource=1 --model_type=2 --penalty_type=0 --p_lr=0.00001 --train --seed=5
 ### 5-shot sinusoid TR-MAML test:
@@ -56,19 +58,7 @@ penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=
 python main.py --datasource=1 --model_type=2 --penalty_type=3
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Sinusoid Regression - CAVIA
 ### 5-shot sinusoid NashCAVIA3 train:
 python main.py --datasource=1 --model_type=5 --penalty_type=3 --train --seed=6 --num_context_params=4
 
