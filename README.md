@@ -19,19 +19,19 @@ python main.py --datasource=1 --model_type=1 --penalty_type=0 --train --seed=5
 ### 5-shot sinusoid MAML test:
 python main.py --datasource=1 --model_type=1 --penalty_type=0
 
-### 5-shot sinusoid MAML+$p_{1}\left(1.0\right)$ train:
+### 5-shot sinusoid MAML + Penalty 1 with weight $1.0$ train:
 python main.py --datasource=1 --model_type=1 --penalty_type=1 --train --seed=5 --weight1=1.0
-### 5-shot sinusoid MAML+$p_{1}\left(1.0\right)$ test:
+### 5-shot sinusoid MAML + Penalty 1 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=1
 
-### 5-shot sinusoid MAML+$p_{2}\left(0.5, 2\right)$ train:
+### 5-shot sinusoid MAML + Penalty 2 with weight $0.5$ train:
 python main.py --datasource=1 --model_type=1 --penalty_type=2 --train --seed=5 --weight2=0.5 --weight3=0.0000001
-### 5-shot sinusoid MAML+$p_{2}\left(0.5, 2\right)$ test:
+### 5-shot sinusoid MAML + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=2
 
-### 5-shot sinusoid MAML+$p_{2}\left(0.5, 4\right)$ train:
+### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ train:
 python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=5 --weight2=0.5 --weight3=0.00000000000001
-### 5-shot sinusoid MAML+$p_{2}\left(0.5, 4\right)$ test:
+### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=3
 
 
