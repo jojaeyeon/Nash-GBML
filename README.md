@@ -3,7 +3,11 @@
 ### Penalty function
 $$p_{1}(w)={{w}\over{\dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2} \lVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rVert_{2}^{2}$$
 
+where $\alpha$ is inner learning rate, $N$ is the number of task, $B$ is the batch-size, and $\dim(\phi)$ is the number of parameters.
+
 $$p_{2}(w, r) = w {{B \lVert \theta - \phi_{i} \rVert_{2}^{r}}\over{C + \sum\limits_{k=1}^{N}{\lVert \theta - \phi_{k} \rVert_{2}^{r}}}}$$
+
+where $N$ is the number of task, $B$ is the batch-size, and $C$ is a very small constant to prevent division by zero.
 
 ### Penalty 1 (w): $p_{1}(w)$
 ### Penalty 2 (w): $p_{2}(w, 2)$
