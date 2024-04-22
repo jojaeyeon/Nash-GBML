@@ -48,13 +48,13 @@ python main.py --datasource=1 --model_type=2 --penalty_type=1 --p_lr=0.00001 --t
 python main.py --datasource=1 --model_type=2 --penalty_type=1
 
 ### 5-shot sinusoid TR-MAML + Penalty 2 with weight $0.5$ train:
-python main.py --datasource=1 --model_type=2 --penalty_type=2 --p_lr=0.00001 --train --seed=5 --weight2=1.0 --weight3=0.0000001
+python main.py --datasource=1 --model_type=2 --penalty_type=2 --p_lr=0.00001 --train --seed=5 --weight2=0.5 --weight3=0.0000001
 ### 5-shot sinusoid TR-MAML + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=2 --penalty_type=2
 
-### 5-shot sinusoid TR-MAML + Penalty 3 with weight $0.5$ train:
+### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ train:
 penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=0.00001 --train --seed=5 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid TR-MAML + Penalty 3 with weight $0.5$ test:
+### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=2 --penalty_type=3
 
 
