@@ -2,12 +2,11 @@
 ## Penalty term
 ### Penalty function
 $$p_{1}(w)={{w}\over{\dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2} \lVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rVert_{2}^{2}$$
+
 $$p_{2}(w, r) = w {{B \lVert \theta - \phi_{i} \rVert_{2}^{r}}\over{C + \sum\limits_{k=1}^{N}{\lVert \theta - \phi_{k} \rVert_{2}^{r}}}}$$
 
-### Penalty 1 (w)
-$$p_{1}(w)$$
-### Penalty 2 (w)
-$$p_{2}(w, 2)$$
+### Penalty 1 (w): $$p_{1}(w)$$
+### Penalty 2 (w): $p_{2}(w, 2)$
 ### Penalty 3 (w)
 $$p_{2}(w, 4)$$
 
