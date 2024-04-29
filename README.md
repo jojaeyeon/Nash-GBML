@@ -16,7 +16,7 @@ where $N$ is the number of task, $B$ is the batch-size, and $C$ is a very small 
 
 ## Sinusoid Regression - MAML
 ### 5-shot sinusoid MAML train:
-python main.py --datasource=1 --model_type=1 --penalty_type=0 --train --seed=5
+python main.py --datasource=1 --model_type=1 --penalty_type=0 --train --seed=3
 ### 5-shot sinusoid MAML test:
 python main.py --datasource=1 --model_type=1 --penalty_type=0
 
@@ -31,14 +31,14 @@ python main.py --datasource=1 --model_type=1 --penalty_type=2 --train --seed=5 -
 python main.py --datasource=1 --model_type=1 --penalty_type=2
 
 ### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ train:
-python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=5 --weight2=0.5 --weight3=0.00000000000001
+python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=3 --weight2=1.0 --weight3=0.00000000000001
 ### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=3
 
 
 ## Sinusoid Regression - TR-MAML
 ### 5-shot sinusoid TR-MAML train:
-python main.py --datasource=1 --model_type=2 --penalty_type=0 --p_lr=0.00001 --train --seed=5
+python main.py --datasource=1 --model_type=2 --penalty_type=0 --p_lr=0.00001 --train --seed=2
 ### 5-shot sinusoid TR-MAML test:
 python main.py --datasource=1 --model_type=2 --penalty_type=0
 
@@ -53,9 +53,31 @@ python main.py --datasource=1 --model_type=2 --penalty_type=2 --p_lr=0.00001 --t
 python main.py --datasource=1 --model_type=2 --penalty_type=2
 
 ### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ train:
-penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=0.00001 --train --seed=5 --weight2=1.0 --weight3=0.00000000000001
+penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=0.00001 --train --seed=2 --weight2=1.0 --weight3=0.00000000000001
 ### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=2 --penalty_type=3
+
+
+## Sinusoid Regression - Meta-SGD
+### 5-shot sinusoid Meta-SGD train:
+python main.py --datasource=1 --model_type=4 --penalty_type=0 --train --seed=5
+### 5-shot sinusoid Meta-SGD test:
+python main.py --datasource=1 --model_type=4 --penalty_type=0
+
+### 5-shot sinusoid Meta-SGD + Penalty 1 with weight $1.0$ train:
+python main.py --datasource=1 --model_type=4 --penalty_type=1 --train --seed=2 --weight1=1.0
+### 5-shot sinusoid Meta-SGD + Penalty 1 with weight $1.0$ test:
+python main.py --datasource=1 --model_type=4 --penalty_type=1
+
+### 5-shot sinusoid Meta-SGD + Penalty 2 with weight $0.5$ train:
+python main.py --datasource=1 --model_type=4 --penalty_type=2 --train --seed=2 --weight2=0.5 --weight3=0.0000001
+### 5-shot sinusoid Meta-SGD + Penalty 2 with weight $0.5$ test:
+python main.py --datasource=1 --model_type=4 --penalty_type=2
+
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ train:
+python main.py --datasource=1 --model_type=4 --penalty_type=3 --train --seed=5 --weight2=1.0 --weight3=0.00000000000001
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ test:
+python main.py --datasource=1 --model_type=4 --penalty_type=3
 
 
 ## Sinusoid Regression - CAVIA
