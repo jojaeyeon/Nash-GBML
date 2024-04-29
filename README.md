@@ -30,9 +30,9 @@ python main.py --datasource=1 --model_type=1 --penalty_type=2 --train --seed=5 -
 ### 5-shot sinusoid MAML + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=2
 
-### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ train:
+### 5-shot sinusoid MAML + Penalty 3 with weight $1.0$ train:
 python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=3 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ test:
+### 5-shot sinusoid MAML + Penalty 3 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=3
 
 
@@ -74,15 +74,14 @@ python main.py --datasource=1 --model_type=4 --penalty_type=2 --train --seed=2 -
 ### 5-shot sinusoid Meta-SGD + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=4 --penalty_type=2
 
-### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ train:
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $1.0$ train:
 python main.py --datasource=1 --model_type=4 --penalty_type=3 --train --seed=5 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ test:
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=4 --penalty_type=3
 
 
 ## Sinusoid Regression - CAVIA
-### 5-shot sinusoid NashCAVIA3 train:
-python main.py --datasource=1 --model_type=5 --penalty_type=3 --train --seed=6 --num_context_params=4
+
 
 ### 5-shot sinusoid NashCAVIA3 test:
 python main.py --datasource=1 --model_type=5 --penalty_type=3 --num_context_params=4
