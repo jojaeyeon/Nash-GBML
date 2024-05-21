@@ -100,3 +100,10 @@ python main.py --datasource=1 --model_type=5 --penalty_type=2 --num_context_para
 python main.py --datasource=1 --model_type=5 --penalty_type=3 --train --weight2=0.5 --weight3=0.00000000000001 --num_context_params=4
 ### 5-shot sinusoid CAVIA + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=5 --penalty_type=3 --num_context_params=4
+
+## Classification
+If you need the Mini-ImageNet dataset, please follow https://github.com/yaoyao-liu/mini-imagenet-tools
+Put them in the folder "data/miniimagenet". The label files are already in there.
+
+To run the experiment, set datasource value as 2. For the other argument options, see arguments.py
+python main.py --datasource=2
