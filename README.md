@@ -103,7 +103,9 @@ python main.py --datasource=1 --model_type=5 --penalty_type=3 --num_context_para
 
 ## Classification
 If you need the Mini-ImageNet dataset, please follow https://github.com/yaoyao-liu/mini-imagenet-tools
+
 Put them in the folder "data/miniimagenet". The label files are already in there.
 
 To run the experiment, set datasource value as 2. For the other argument options, see arguments.py
+
 python main.py --datasource=2
