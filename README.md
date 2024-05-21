@@ -1,7 +1,7 @@
 # Nash Gradient-Based Meta-Learning
 ## Penalty term
 ### Penalty function
-$$p_{1}(w)=w \left({{N}\over{\alpha B}}\right)^{2} \lVert \theta - {{1}\over{B}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rVert_{2}^{2}$$
+$$p_{1}(w)=w \left({{B}\over{\alpha N}}\right)^{2} \lVert \theta - {{1}\over{B}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{B}} \phi_{i} \rVert_{2}^{2}$$
 
 where $\alpha$ is inner learning rate, $N$ is the number of task, $B$ is the batch-size, and $\dim(\phi)$ is the number of parameters.
 
