@@ -1,7 +1,7 @@
 # Nash Gradient-Based Meta-Learning
 ## Penalty term
 ### Penalty function
-$$p_{1}(w)={{w}\over{\dim(\phi)}} \left({{N}\over{\alpha B}}\right)^{2} \lVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rVert_{2}^{2}$$
+$$p_{1}(w)=w \left({{N}\over{\alpha B}}\right)^{2} \lVert \theta - {{1}\over{N}}\sum\limits_{k\ne i}{\phi_{k}} - {{1}\over{N}} \phi_{i} \rVert_{2}^{2}$$
 
 where $\alpha$ is inner learning rate, $N$ is the number of task, $B$ is the batch-size, and $\dim(\phi)$ is the number of parameters.
 
@@ -30,9 +30,9 @@ python main.py --datasource=1 --model_type=1 --penalty_type=2 --train --seed=5 -
 ### 5-shot sinusoid MAML + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=2
 
-### 5-shot sinusoid MAML + Penalty 3 with weight $1.0$ train:
-python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=3 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid MAML + Penalty 3 with weight $1.0$ test:
+### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ train:
+python main.py --datasource=1 --model_type=1 --penalty_type=3 --train --seed=3 --weight2=0.5 --weight3=0.00000000000001
+### 5-shot sinusoid MAML + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=1 --penalty_type=3
 
 
@@ -52,9 +52,9 @@ python main.py --datasource=1 --model_type=2 --penalty_type=2 --p_lr=0.00001 --t
 ### 5-shot sinusoid TR-MAML + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=2 --penalty_type=2
 
-### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ train:
-penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=0.00001 --train --seed=2 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid TR-MAML + Penalty 3 with weight $1.0$ test:
+### 5-shot sinusoid TR-MAML + Penalty 3 with weight $0.5$ train:
+penalty 3: python main.py --datasource=1 --model_type=2 --penalty_type=3 --p_lr=0.00001 --train --seed=2 --weight2=0.5 --weight3=0.00000000000001
+### 5-shot sinusoid TR-MAML + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=2 --penalty_type=3
 
 
@@ -74,29 +74,29 @@ python main.py --datasource=1 --model_type=4 --penalty_type=2 --train --seed=2 -
 ### 5-shot sinusoid Meta-SGD + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=4 --penalty_type=2
 
-### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $1.0$ train:
-python main.py --datasource=1 --model_type=4 --penalty_type=3 --train --seed=5 --weight2=1.0 --weight3=0.00000000000001
-### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $1.0$ test:
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ train:
+python main.py --datasource=1 --model_type=4 --penalty_type=3 --train --seed=5 --weight2=0.5 --weight3=0.00000000000001
+### 5-shot sinusoid Meta-SGD + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=4 --penalty_type=3
 
 
 ## Sinusoid Regression - CAVIA
 ### 5-shot sinusoid CAVIA train:
-python main.py --datasource=1 --model_type=5 --penalty_type=0 --train --seed=3 --num_context_params=4
+python main.py --datasource=1 --model_type=5 --penalty_type=0 --train --seed=2 --num_context_params=4
 ### 5-shot sinusoid CAVIA test:
 python main.py --datasource=1 --model_type=5 --penalty_type=0 --num_context_params=4
 
 ### 5-shot sinusoid CAVIA + Penalty 1 with weight $1.0$ train:
-python main.py --datasource=1 --model_type=5 --penalty_type=1 --train --seed=3 --weight1=1.0 --num_context_params=4
+python main.py --datasource=1 --model_type=5 --penalty_type=1 --train --seed=2 --weight1=1.0 --num_context_params=4
 ### 5-shot sinusoid CAVIA + Penalty 1 with weight $1.0$ test:
 python main.py --datasource=1 --model_type=5 --penalty_type=1 --num_context_params=4
 
 ### 5-shot sinusoid CAVIA + Penalty 2 with weight $0.5$ train:
-python main.py --datasource=1 --model_type=5 --penalty_type=2 --train --seed=3 --weight2=0.5 --weight3=0.0000001 --num_context_params=4
+python main.py --datasource=1 --model_type=5 --penalty_type=2 --train --seed=2 --weight2=0.5 --weight3=0.0000001 --num_context_params=4
 ### 5-shot sinusoid CAVIA + Penalty 2 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=5 --penalty_type=2 --num_context_params=4
 
-### 5-shot sinusoid CAVIA + Penalty 3 with weight $1.0$ train:
-python main.py --datasource=1 --model_type=5 --penalty_type=3 --train --seed=3 --weight2=1.0 --weight3=0.00000000000001 --num_context_params=4
-### 5-shot sinusoid CAVIA + Penalty 3 with weight $1.0$ test:
+### 5-shot sinusoid CAVIA + Penalty 3 with weight $0.5$ train:
+python main.py --datasource=1 --model_type=5 --penalty_type=3 --train --seed=2 --weight2=0.5 --weight3=0.00000000000001 --num_context_params=4
+### 5-shot sinusoid CAVIA + Penalty 3 with weight $0.5$ test:
 python main.py --datasource=1 --model_type=5 --penalty_type=3 --num_context_params=4
