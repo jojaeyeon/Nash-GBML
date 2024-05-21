@@ -121,7 +121,7 @@ def evaluation(args, tasks, dir, num_tasks_mtest=None):
                     test_loss.append(torch.argmax(F.softmax(model.parameterised(query_x[i], weights), dim=1), 1).eq(query_y[i]).sum().item() / len(query_y[i]))
 
         avg_loss = np.mean(test_loss)
-        worst_loss = np.max(test_loss) # meaningless
-        std_devs = np.std(test_loss) # meaningless
+        worst_loss = np.max(test_loss)
+        std_devs = np.std(test_loss)
 
         return avg_loss, worst_loss, std_devs
